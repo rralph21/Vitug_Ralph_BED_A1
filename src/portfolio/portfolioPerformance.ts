@@ -1,4 +1,4 @@
-// Given variables
+// creating interface with given variables
 /**
  * @param initialInvestment - amount of investment
  * @param currentValue - amount of current value
@@ -35,13 +35,16 @@ export function calculatePortfolioPerformance(
     const percentageChange = Number((profitOrLoss / initialInvestment) * 100);
 
     // performance summary not including any if statemesnt
+    // range of percentageChange (profitOrLoss)
     const performanceSummary = 
             percentageChange >= 30
             ? "Excellent performance! Your investment are doing great.":
             percentageChange > 10
-            ? "Solid gain. Keep monitoring you invesment" :
+            ? "Solid gain. Keep monitoring you invesment." :
             percentageChange > 0
             ? "Modest gain, Your portfolio is growing slowly!" :
+            percentageChange <= -10
+            ? "Significant loss, Review your portfolio strategy." :
             percentageChange < 0
             ? "Minor loss, Stay calm and review your options." :
             "No change in portfolio value.";
