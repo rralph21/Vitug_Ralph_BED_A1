@@ -4,6 +4,7 @@ import {portfolioPerformances, calculatePortfolioPerformance} from "./portfolio/
 let app: Express = express();
 
 // API end point that responds in json format
+// Number convertion with each query
 app.get("/api/v1/portfolio/portfolioPerformance", (req, res) => {
     let initialInvestment = Number(req.query.initialInvestment);
     let currentValue = Number(req.query.currentValue);
