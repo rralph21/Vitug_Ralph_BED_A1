@@ -17,6 +17,12 @@ export interface portfolioPerformance {
 }
 
 // given buggy implementation
+/**
+ * calculatePortfolioPerformance function with performance summary
+ * @param initialInvestment : amount of initial investment
+ * @param currentValue : amount of current investment
+ * @returns : performance summary depending on percentageChange
+ */
 
 export function calculatePortfolioPerformance(
     initialInvestment: number,
