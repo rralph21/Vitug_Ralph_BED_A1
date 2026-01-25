@@ -3,7 +3,7 @@ import {portfolioPerformances, calculatePortfolioPerformance} from "./portfolio/
 // Initialize Express application
 let app: Express = express();
 
-// Define a route
+// API end point that responds in json format
 app.get("/api/v1/portfolio/portfolioPerformance", (req, res) => {
     let initialInvestment = Number(req.query.initialInvestment);
     let currentValue = Number(req.query.currentValue);
@@ -12,7 +12,8 @@ app.get("/api/v1/portfolio/portfolioPerformance", (req, res) => {
         initialInvestment,
         currentValue
     )
-
+    
+    // returns status code if undefined
     if (result === undefined){
         res.status(404).send("initialInvestment and currentValue are not found")
     }
