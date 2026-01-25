@@ -1,7 +1,7 @@
-// test/portfolioPerformance.test.ts
-
+// importing function
 import { calculatePortfolioPerformance } from "../src/portfolio/portfolioPerformance";
 
+// describe and test each function
 describe("performanceSummary logic", () => {
 
 // 60% gain
