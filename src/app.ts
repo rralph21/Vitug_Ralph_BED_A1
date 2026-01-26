@@ -16,7 +16,7 @@ app.get("/api/v1/portfolio/portfolioPerformance", (req, res) => {
     
     // returns status code if undefined
     if (isNaN(initialInvestment) || isNaN(currentValue)){
-        res.status(404).send("initialInvestment and currentValue are not found")
+        res.status(404).send("initialInvestment and currentValue must be numerical")
     }
 
     res.json(result);
